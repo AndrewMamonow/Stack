@@ -26,7 +26,7 @@ class Stack:
         # Возвращает количество элементов в стеке.
         return len(self.items)
 
-def balanced_(expression):
+def is_balanced(expression):
     stack = Stack()
     opening = "([{"
     closing = ")]}"
@@ -54,4 +54,4 @@ if __name__ == "__main__":
 
 for expression in test_cases:
     result = is_balanced(expression)
-    print(f"{expression}: {'Сбалансировано' if result else 'Несбалансировано'}")  
+    print(f"{expression}: {'Сбалансировано, количество скобок совпадает' if result else 'Несбалансировано, количество скобок не совпадает'}")  
